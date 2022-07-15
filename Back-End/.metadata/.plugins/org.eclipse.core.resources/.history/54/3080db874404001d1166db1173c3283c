@@ -1,0 +1,28 @@
+package com.pod4.authorization.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
+
+import com.pod4.authorization.repository.UserRepository;
+
+@Service
+public class UserServices  implements UserDetailsService{
+	private static Logger logger = LoggerFactory.getLogger(AdminDetailsService.class);
+
+
+	@Autowired
+	private UserRepository userRepository;
+	/**
+	 * Get UserData using JpaRepository, to get data by username,
+	 * throw exceptions if user not found
+	 */
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

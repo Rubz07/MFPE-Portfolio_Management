@@ -1,0 +1,10 @@
+package com.pod4.DailySharePrice.model;
+@Table(name="stocklist")
+public class Stock {
+
+	@Id
+	private int stockId;
+	@Column(unique = true, nullable = false)
+	private String stockName;
+	private double stockValue;
+}

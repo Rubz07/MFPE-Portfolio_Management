@@ -1,0 +1,5 @@
+package com.pod4.authorization.util;
+
+public class JwtUtil {
+
+}

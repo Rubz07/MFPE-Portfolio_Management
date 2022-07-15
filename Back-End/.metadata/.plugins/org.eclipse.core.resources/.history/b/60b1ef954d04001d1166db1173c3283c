@@ -1,0 +1,10 @@
+package com.pod4.authorization.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.pod4.authorization.model.Users;
+
+public interface UserRepository extends JpaRepository<Users, Integer> {
+	public Users findByUsername(String uname);
+	
+}

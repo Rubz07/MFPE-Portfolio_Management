@@ -1,0 +1,7 @@
+package com.pod4.authorization.controller;
+@RestController
+@Slf4j
+@CrossOrigin(origins = "*")
+public class AuthenticationController {
+
+}

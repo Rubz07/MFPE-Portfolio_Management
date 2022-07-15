@@ -1,0 +1,45 @@
+package com.pod4.authorization.service;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.core.userdetails.User;
+import com.pod4.authorization.model.UserData;
+import com.pod4.authorization.repository.UserRepository;
+
+import java.util.ArrayList;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+public class UserService implements UserDetailsService {
+	private static Logger logger = LoggerFactory.getLogger(UserService.class);
+	@Autowired
+	private UserRepository userRepository;
+	
+	
+	/**
+	 * Get UserData using JpaRepository, to get data by username,
+	 * throw exceptions if user not found
+	 */
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		logger.info("START");
+		try {
+			UserData user = userRepository.findById(uid).orElse(null);
+			if (user != null) {
+				user.getId()
+				logger.info("END - User found");
+				return new User(user.getId(), user.getPassword(), new ArrayList<>());
+			} else {
+				logger.info("END - UsernameNotFound");
+				throw new UsernameNotFoundException("UsernameNotFoundException");
+			}
+		} catch (Exception e) {
+			logger.info("EXCEPTION - UsernameNotFoundException");
+			throw new UsernameNotFoundException("UsernameNotFoundException");
+		}
+	}
+
+}

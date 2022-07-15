@@ -1,0 +1,5 @@
+package com.pod4.DailySharePrice.authorization;
+
+public class AuthorizationClient {
+
+}

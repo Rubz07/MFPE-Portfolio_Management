@@ -1,0 +1,12 @@
+package com.pod4.DailySharePrice.authorization;
+
+public class AuthorizationClient {
+
+	@FeignClient(url = "http://localhost:8081", name = "AUTHORIZATION-SERVICE")
+	public interface AuthorizationClient {
+		
+		@GetMapping("/getuname")
+		public String getUname(@RequestHeader("Authorization") String authorization);
+
+	}
+}

@@ -1,0 +1,5 @@
+package com.pod4.authorization.controller;
+
+public class AuthenticationController {
+
+}

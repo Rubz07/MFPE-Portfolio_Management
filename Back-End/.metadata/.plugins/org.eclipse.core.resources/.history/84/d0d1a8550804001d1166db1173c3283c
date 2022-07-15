@@ -1,0 +1,5 @@
+package com.pod4.DailySharePrice.controller;
+
+public class StockController {
+
+}

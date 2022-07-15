@@ -1,0 +1,52 @@
+package com.pod4.authorization.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.pod4.authorization.model.User;
+import com.pod4.authorization.repository.UserRepository;
+
+@Service
+public class UserServices  implements UserDetailsService{
+	private static Logger logger = LoggerFactory.getLogger(UserServices.class);
+
+
+	@Autowired
+	private UserRepository userRepository;
+	/**
+	 * Get UserData using JpaRepository, to get data by username,
+	 * throw exceptions if user not found
+	 */
+	@Override
+	public UserDetails loadUserByUsername(String uid) throws UsernameNotFoundException {
+		logger.info("START");
+		try {
+			  User user=userRepository.findById(uid);
+			if (user != null) {
+				user.getUsername();
+				logger.info("END - User found");
+				return new User(user.getId(), user.getPassword(), new ArrayList<>());
+			} else {
+				logger.info("END - UsernameNotFound");
+				throw new UsernameNotFoundException("UsernameNotFoundException");
+			}
+		} catch (Exception e) {
+			logger.info("EXCEPTION - UsernameNotFoundException");
+			throw new UsernameNotFoundException("UsernameNotFoundException");
+		}
+	}
+	
+	/**
+	 * Get User by username
+	 */
+	public int findUserId(String uname) {
+		User user=userRepository.findByUsername(uname);
+		return user.getId();
+	}
+
+}

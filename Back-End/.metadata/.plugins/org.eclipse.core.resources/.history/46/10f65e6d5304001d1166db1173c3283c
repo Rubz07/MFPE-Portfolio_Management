@@ -1,0 +1,49 @@
+package com.pod4.authorization.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Table(name="userrecord")
+@Data
+
+public class UserData {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "user_id")
+	private int id;
+	@Column( name="user_name", unique = true, nullable = false)
+	private String username;
+	@Column(name="user_password")
+	private String password;
+	private String authToken;
+	public String getAuthToken() {
+		return authToken;
+	}
+
+	public void setAuthToken(String authToken) {
+		this.authToken = authToken;
+	}
+
+	public UserData(String userid, String upassword, String uname, String authToken) {
+		super();
+		this.userid = userid;
+		this.upassword = upassword;
+		this.uname = uname;
+		this.authToken = authToken;
+	}
+
+	public UserData() {
+
+	}
+
+}

@@ -1,0 +1,17 @@
+1657894543419	Rename type 'UserDetailsService'
+1657896541275	Rename type 'User'
+1657896615419	Delete element
+1657896763130	Delete element
+1657896933178	Rename type 'Users'
+1657903585180	Delete elements
+1657903618561	Rename package 'com.cts.authorization.controller'
+1657903629521	Rename package 'com.cts.authorization.exception'
+1657904070163	Delete elements
+1657904334518	Rename package 'com.cts.authorization.controller'
+1657904360269	Rename package 'com.cts.authorization.util'
+1657904372811	Rename package 'com.cts.authorization.service'
+1657904384984	Rename package 'com.cts.authorization.security'
+1657904399064	Rename package 'com.cts.authorization.repository'
+1657904409659	Rename package 'com.cts.authorization.model'
+1657904422907	Rename package 'com.cts.authorization.exception'
+1657904443892	Rename package 'com.cts.authorization'

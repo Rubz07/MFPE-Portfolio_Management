@@ -1,0 +1,5 @@
+package com.pod4.authorization.model;
+
+public class User {
+
+}

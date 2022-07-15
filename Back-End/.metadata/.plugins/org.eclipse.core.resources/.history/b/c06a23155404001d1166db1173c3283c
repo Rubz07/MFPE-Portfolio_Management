@@ -1,0 +1,57 @@
+package com.pod4.authorization.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.pod4.authorization.model.UserData;
+import com.pod4.authorization.service.UserService;
+
+import io.swagger.v3.oas.annotations.parameters.RequestBody;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
+
+@RestController
+@Slf4j
+@CrossOrigin(origins = "*")
+public class AuthenticationController {
+	private static Logger logger = LoggerFactory.getLogger(AuthenticationController.class);
+	
+	@Autowired
+	private UserService userService;
+	@Autowired
+	private JwtUtil jwtutil;
+	
+	/**
+	 * This method is used to check the login credentials, if there are valid,
+	 * by checking against the database.
+	 */		
+
+	@PostMapping("/login")
+	public ResponseEntity<?> login(@RequestBody UserData userCredentials) {
+		logger.info("START");
+		final UserDetails userdetails = userService.loadUserByUsername(userCredentials.getUsername());
+	
+		String generateToken = "";
+		String username=userdetails.getUsername();
+		String userpassword=userdetails.getPassword();
+		if (userdetails.getPassword().equals(userCredentials.getPassword())) {
+			int uid = userCredentials.getId();
+			
+			generateToken = jwtutil.generateToken(userdetails);
+			logger.info(generateToken);
+			logger.info("END");
+			return new ResponseEntity<>(new UserData(uid, username, userpassword, generateToken), HttpStatus.OK);
+		} else {
+			logger.info("END - Wrong credentials");
+			return new ResponseEntity<>("Not Accesible", HttpStatus.FORBIDDEN);
+		}
+	}
+	
+}

@@ -1,0 +1,6 @@
+package com.pod4.authorization.repository;
+
+public interface UserRepository extends JpaRepository<User, Integer> {
+	public User findByUsername(String uname);
+	
+}

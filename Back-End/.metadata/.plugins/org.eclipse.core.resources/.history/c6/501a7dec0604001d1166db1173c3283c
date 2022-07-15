@@ -1,0 +1,5 @@
+package com.pod4.DailySharePrice.repository;
+
+public interface StockRepository {
+
+}

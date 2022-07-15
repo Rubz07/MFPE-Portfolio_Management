@@ -1,0 +1,7 @@
+package com.pod4.authorization.config;
+
+import org.springframework.security.config.annotation.web.WebSecurityConfigurer;
+
+public class SecurityConfigurer implements WebSecurityConfigurer<T> {
+
+}

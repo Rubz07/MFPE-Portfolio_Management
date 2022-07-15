@@ -1,0 +1,13 @@
+1657875163490	Delete element
+1657875179406	Delete element
+1657875272354	Rename package 'com.pod4.DailySharePrice.authorization'
+1657875282204	Rename package 'com.pod4.DailySharePrice.controller'
+1657875296985	Rename package 'com.pod4.DailySharePrice.exception'
+1657875308867	Rename package 'com.pod4.DailySharePrice.model'
+1657875316135	Rename package 'com.pod4.DailySharePrice.repository'
+1657875324104	Rename package 'com.pod4.DailySharePrice.service'
+1657875379011	Rename type 'StockController'
+1657875422251	Rename type 'StockNotFoundException'
+1657875436808	Rename type 'Stock'
+1657875461633	Rename type 'StockRepository'
+1657875480587	Rename type 'StockService'

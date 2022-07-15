@@ -1,0 +1,10 @@
+package com.pod4.authorization.exception;
+
+public class UserNotFoundException {
+
+	private static final long serialVersionUID = 1L;
+
+	public UserNotFoundException(String str) {
+		super(str);
+	}
+}

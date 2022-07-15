@@ -1,0 +1,20 @@
+package com.pod4.DailySharePrice.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Entity
+@Table(name="stocklist")
+@Data
+public class Stock {
+
+	@Id
+	private int stockId;
+	@Column(unique = true, nullable = false)
+	private String stockName;
+	private double stockValue;
+}
