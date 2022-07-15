@@ -1,0 +1,2 @@
+# MFPE-Portfolio_Management
+A leading Financial Services Organization wants to strengthen its Middleware by exposing the core logic related to Portfolio Management as Microservices. This middle ware Microservices will be hosted on Cloud so that all the up/downstream applications can get an access to this for performing business transactions. There will also be a customer Portal to be developed part of this scope that consumes these Microservices to view their portfolio information and sell their assets.
