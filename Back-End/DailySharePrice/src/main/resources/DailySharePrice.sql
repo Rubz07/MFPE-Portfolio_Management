@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS `MyPortfolio`.`stocklist` (
   PRIMARY KEY (`stock_id`))
 
 AUTO_INCREMENT = 1;
-insert into stocklist values(1,'SYNGENE',610.00);
+insert into stocklist values(1,'SYNGENE',1000.00);
 insert into stocklist values(2,'FOSECOIND',1573.00);
 insert into stocklist values(3,'KSOLVES',391.00);
 insert into stocklist values(4,'MAHINDCIE',238.00);
