@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="D:\Project\MFPE\Portfolio-Manaement\Back-End\CalculateNetworth"/>
 			<item value="D:\Project\MFPE\Portfolio-Manaement\Back-End\Authorization"/>
 			<item value="D:\Project\MFPE\Portfolio-Manaement\Back-End\DailySharePrice"/>
 		</list>
