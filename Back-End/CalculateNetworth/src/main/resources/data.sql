@@ -1,4 +1,4 @@
-
+DROP SCHEMA IF EXISTS `AssetDetails`;
 create database AssetDetails;
 use AssetDetails;
 
