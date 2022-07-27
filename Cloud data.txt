@@ -1,0 +1,17 @@
+ ssh -i "pod4.pem" ec2-user@ec2-3-109-212-171.ap-south-1.compute.amazonaws.com
+
+
+
+Authorization-0.0.1-SNAPSHOT.jar  
+CalculateNetworth-0.0.1-SNAPSHOT.jar 
+ DailyMutualFundNAV-0.0.1-SNAPSHOT.jar  
+DailySharePrice-0.0.1-SNAPSHOT.jar
+
+
+
+
+connection
+ec2-3-109-212-171.ap-south-1.compute.amazonaws.com:8080
+ec2-3-109-212-171.ap-south-1.compute.amazonaws.com:8081
+ec2-3-109-212-171.ap-south-1.compute.amazonaws.com:8082
+ec2-3-109-212-171.ap-south-1.compute.amazonaws.com:8083

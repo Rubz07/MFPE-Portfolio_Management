@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.RequestHeader;
 
 import com.pod4.calculatenetworth.vo.StockDetailsVO;
 
+
+//#CLOUD URL=http://ec2-3-109-212-171.ap-south-1.compute.amazonaws.com:8081
+
 @FeignClient(url = "http://localhost:8081", name = "DailySharePrice")
 public interface DailySharePriceClient {
 	

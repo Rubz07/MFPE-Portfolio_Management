@@ -1,9 +1,6 @@
 package com.pod4.calculatenetworth.controller;
-
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -18,9 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.pod4.calculatenetworth.feignclient.AuthorizationClient;
 import com.pod4.calculatenetworth.model.AssetSaleResponse;
-import com.pod4.calculatenetworth.model.MutualFund;
+
 import com.pod4.calculatenetworth.model.PortfolioDetails;
-import com.pod4.calculatenetworth.model.StockDetail;
+
 import com.pod4.calculatenetworth.service.MutualFundService;
 import com.pod4.calculatenetworth.service.PortfolioDetailService;
 import com.pod4.calculatenetworth.service.StockDetailService;
